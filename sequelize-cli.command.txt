@@ -1,0 +1,6 @@
+sequelize-cli model:generate --name Provinsi --attributes nama:string
+sequelize-cli model:generate --name Kabupaten --attributes nama:string,provinsiId:integer
+sequelize-cli model:generate --name Kecamatan --attributes nama:string,kabupatenId:integer
+sequelize-cli model:generate --name Desa --attributes nama:string,kecamatanId:integer
+sequelize-cli model:generate --name Alamat --attributes alamatLengkap:string,rt:string,rw:string,kodePos:string,noTelepon:string,desaId:integer
+sequelize-cli model:generate --name Pasien --attributes nama:string,gelar:jsonb,noRm:string,tempatLahirId:integer,tanggalLahir:date,jenisKelamin:string,alamatId:string
